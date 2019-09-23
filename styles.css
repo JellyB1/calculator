@@ -1,0 +1,75 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+body {
+    /*this is for background display*/
+    padding: 0;
+    margin: 0%;
+    background-image: url("https://s3.amazonaws.com/spoonflower/public/design_thumbnails/0569/4083/rbt_simple_mint_shop_thumb.png") 
+    /*background: linear-gradient(to right, #191970, #4b0082)*/;
+}
+
+.calculatorGrid {
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    /*vh =view height, 100vh = 100% of view height*/
+    grid-template-columns: repeat(4,100px);
+    /*4 columns, at a max of 100px*/
+    grid-template-rows: minmax(120px,auto)repeat(5,100px)
+    /*at least 120px high, and adjust accordinly; repeat for 5 rows*/
+}
+
+.calculatorGrid > button {
+    /*to call all buttons associated with calculatorGrid*/
+    cursor: pointer;
+    font-size: 2rem;
+    /*rem = Root Element. 1rem = font size of html element, typically 16px*/
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255,255,255,1);
+    /*rgba is a way to call color, like #. 
+    hue = 255; saturation = 255; lightness = 255; opacity = 0-1*/
+}
+
+.calculatorGrid > button:hover{
+    background-color: rgba(187, 178, 178, 0.75);
+}
+
+.spanTwo{
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    /*as wide as the first one to the last one*/
+    background-color: rgba(0,0,0,.75);
+    display: flex;
+    /*flex means can change size as needed*/
+    align-items: flex-end;
+    /*items are going to start at the right/end of box*/
+    justify-content: space-around;
+    flex-direction: column;
+    /**/
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    /*think, word wrap. Allows for a word to be broken in the middle to wrap onto next line*/
+}
+
+.output .previousEntry {
+    /*for font color of upper line*/
+    color: rgba(225,225,225,.75);
+    font-size: 1.5rem;
+}
+
+.output .currentEntry {
+    /*for font color of lower line*/
+    color: rgba(255,255,255,.90);
+    font-size: 2rem;
+}
