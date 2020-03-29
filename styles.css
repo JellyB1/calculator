@@ -8,8 +8,8 @@ body {
     /*this is for background display*/
     padding: 0;
     margin: 0%;
-    background-image: url("https://s3.amazonaws.com/spoonflower/public/design_thumbnails/0569/4083/rbt_simple_mint_shop_thumb.png") 
-    /*background: linear-gradient(to right, #191970, #4b0082)*/;
+    /*background-image: url("https://s3.amazonaws.com/spoonflower/public/design_thumbnails/0569/4083/rbt_simple_mint_shop_thumb.png")  */
+    background: linear-gradient(to right, #191970, #4b0082);
 }
 
 .calculatorGrid {
